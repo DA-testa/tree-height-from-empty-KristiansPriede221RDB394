@@ -2,7 +2,7 @@
 import sys
 import threading
 check=input()
-if check.startswith('I'):
+if check.startswith('I')or check.startswith('F'):
      n=int(input())
      parents=list(map(int,input().split(' ')))
 class Tree():
