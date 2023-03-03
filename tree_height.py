@@ -1,7 +1,7 @@
 # python3
 import sys
 import threading
-path="/home/runner/work/tree-height-from-empty-KristiansPriede221RDB394/tree-height-from-empty-KristiansPriede221RDB394/"
+path="/home/runner/work/tree-height-from-empty-KristiansPriede221RDB394/tree-height-from-empty-KristiansPriede221RDB394/test/"
 ##path="C:\\Users\\Kristians\\Desktop\\pitons_vs\\tree-height-from-empty-KristiansPriede221RDB394\\test\\"
 check=input()
 if check.startswith('I'):
