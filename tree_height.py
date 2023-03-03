@@ -11,11 +11,21 @@ elif check.startswith('F'):
      filename=input()
      if filename.__contains__("a")==False:
                ptf=path+filename
+               count=0
                with open(ptf,'r')as file:
-                fl=file.read()
-                n=int(fl.split('\n')[0])
-                parents_str=fl.split('\n')[1]
-                parents=list(map(int,parents_str.split(' ')))
+                              for line in file:
+                                    if(count==0):
+                                          n=int(line)      
+                                    elif(count>0):
+                                          arr=line.split()
+                                          parents=list(map(int,arr))
+                                    count=count+1
+                                          
+
+##                     fl=file.read()
+##                     n=int(fl.split('\n',1)[0])
+##                     parents_str=fl.split('\n',1)[1]
+##                     parents=list(map(int,parents_str.split(' ')))
                                 
 class Tree():
     def get(k,n,parents):
