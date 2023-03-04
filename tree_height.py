@@ -1,31 +1,23 @@
 # python3
 import sys
 import threading
+import numpy as np
 path="/home/runner/work/tree-height-from-empty-KristiansPriede221RDB394/tree-height-from-empty-KristiansPriede221RDB394/test/"
 ##path="C:\\Users\\Kristians\\Desktop\\pitons_vs\\tree-height-from-empty-KristiansPriede221RDB394\\test\\"
 check=input()
 if check.startswith('I'):
      n=int(input())
-     parents=list(map(int,input().split(' '))) 
+     parents=(list(map(int,input().split(' '))))
 elif check.startswith('F'):
      filename=input()
      if filename.__contains__("a")==False:
                ptf=path+filename
                count=0
                with open(ptf,'r')as file:
-                              for line in file:
-                                    if(count==0):
-                                          n=int(line)      
-                                    elif(count>0):
-                                          arr=line.split()
-                                          parents=list(map(int,arr))
-                                    count=count+1
-                                          
-
-##                     fl=file.read()
-##                     n=int(fl.split('\n',1)[0])
-##                     parents_str=fl.split('\n',1)[1]
-##                     parents=list(map(int,parents_str.split(' ')))
+                      fl=file.readlines()
+                      n=int(fl[0])
+                      parents_ar=fl[1].split(' ')
+                      parents=list(map(int,parents_ar))
                                 
 class Tree():
     def get(k,n,parents):
